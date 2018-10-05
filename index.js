@@ -30,11 +30,7 @@ var prefix = "/";
         var hojee = dd+ '/' +mm+ '/' +yyyy;
 
 client.on("ready", () => {
-    
-    client.channels.get('496450533884821515').send(':white_check_mark: | Bot reiniciado com sucesso !\n\nData: ' + hoje).then(msg => {
-        msg.delete(60000)
-    })
-        
+     
     const activities = ['https://gamersboard.com.br/', 'https://gamersboard.com.br/']
     let counter = 0
     setInterval(function() {
