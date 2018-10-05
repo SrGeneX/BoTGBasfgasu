@@ -127,7 +127,6 @@ client.on('message', (message) => {
             .setDescription('Nova denúncia criada.')
             .addField('<:e_mail:457899299213279243> | Acusado:', user, true)
             .addField('<:flag_pm:457899299376726016> | Autor:', message.author, true)
-            .addField('💬 | Canal:', message.channel, true)
             .addField('📝 | Motivo:', motivo[0], true)
             .addField('🖼 | Prova:', motivo[1], true)
             .setThumbnail(client.user.avatarURL)
