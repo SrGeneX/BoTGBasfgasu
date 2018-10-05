@@ -131,7 +131,7 @@ client.on('message', (message) => {
             .addField('📝 | Motivo:', motivo[0], true)
             .addField('🖼 | Prova:', motivo[1], true)
             .setThumbnail(client.user.avatarURL)
-        client.channels.get('496518957394558976').send(reportado).then(msg => {
+        client.channels.get('497807909405851659').send(reportado).then(msg => {
             msg.react('✅');
             msg.react('❌');
         });
