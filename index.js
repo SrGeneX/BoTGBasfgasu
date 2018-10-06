@@ -102,8 +102,8 @@ client.on('message', (message) => {
             .setTitle(`:loudspeaker: Gamersboard - Anúncio`)
             .setDescription(args1[0])
             .setThumbnail('')
-            .setColor('f26363')
-            .setFooter('*__Atenciosamente,__*', message.author.username, message.author.avatarURL)
+            .setColor('3498db')
+            .setFooter('*__Atenciosamente,__*', message.author.username)
 	         message.channel.send(embed);
    
         }
