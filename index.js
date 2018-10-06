@@ -100,10 +100,10 @@ if(msg.startsWith(prefix + 'AVISO')){
               let args1 = message.content.slice(prefix.length + 5).split('/');
             let embed = new Discord.RichEmbed()
             .setTitle(`:loudspeaker: Gamers Board - Anúncio`)
-            .setDescription(args1[0], '\n Atenciosamente,')
+            .setDescription(args1[0])
             .setThumbnail('')
             .setColor('3498db')
-            .setFooter(message.author.username, message.author.avatarURL)
+            .setFooter('Atenciosamente', message.author.username, message.author.avatarURL)
              message.channel.send(embed);
     
         }
