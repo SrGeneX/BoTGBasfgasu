@@ -58,7 +58,6 @@ client.on('message', (message) => {
 
     if(msg.startsWith(prefix + 'SUGERIR')){
 
-        message.delete();
 
         let sugerindo = args.slice(0).join(" ");
 
@@ -91,7 +90,6 @@ client.on('message', (message) => {
     
        if(msg.startsWith(prefix + 'AVISO')){
         
-        message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
         })
               let args1 = message.content.slice(prefix.length + 5).split(";");
@@ -107,7 +105,6 @@ client.on('message', (message) => {
     
     if(msg.startsWith(prefix + 'CHANGELOG')){
         
-            message.delete();
                 if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
                 msg.delete(10000)
             })
@@ -124,7 +121,6 @@ client.on('message', (message) => {
     
     if(msg.startsWith(prefix + 'DENUNCIAR')){
 
-        message.delete();
 
         let user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
@@ -171,7 +167,6 @@ client.on('message', (message) => {
 
     if(msg.startsWith(prefix + 'AJUDA') || msg.startsWith(prefix + 'TICKET')){
 
-        message.delete();
         let motivo = args.slice(0).join(" ");
 
         const mto = new Discord.RichEmbed()
@@ -237,7 +232,6 @@ client.on('message', (message) => {
 
     if(msg.startsWith(prefix + 'FECHAR')){
 
-        message.delete();
 
         if(!message.channel.name.startsWith(`ticket-`)) return message.reply(':x: | Esse comando não pode ser usado aqui... :frowning:').then(msg => {
             msg.delete(10000);
