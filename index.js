@@ -109,6 +109,23 @@ client.on('message', (message) => {
         client.channels.get('497807969497645056').send({embed});
         }
     
+    if(msg.startsWith(prefix + 'CHANGELOG')){
+        
+            message.delete();
+                if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
+                msg.delete(10000)
+            })
+                  let args1 = message.content.slice(prefix.length + 9);
+                let embed = new Discord.RichEmbed()
+                    .setTitle(`:pencil: | GamersBoard - Atualização `)
+                    .setDescription(`${args1}`)
+                .setColor('f26363')
+                .setFooter(message.author.username, message.author.avatarURL)
+	         message.channel.send(embed);
+        
+          
+        }
+    
     if(msg.startsWith(prefix + 'DENUNCIAR')){
 
         message.delete();
