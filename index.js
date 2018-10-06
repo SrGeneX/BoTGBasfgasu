@@ -100,9 +100,8 @@ client.on('message', (message) => {
               let args1 = message.content.slice(prefix.length + 5).split(";");
             let embed = new Discord.RichEmbed()
                 .setFooter(hoje)
-                .setTitle(`:loudspeaker: Gamers Board - Anúncio`)
+                .setTitle(`:loudspeaker: | Gamers Board - Anúncio`)
                 .setDescription(args1[0])
-                .setThumbnail('https://cdn.discordapp.com/attachments/437386255974662144/498179091262996484/cf8763951089898365e532f80b82076d.png')
                 .addField('Atenciosamente,', message.author.username)
                 .setColor('3498db')
     
@@ -283,10 +282,10 @@ client.on('guildMemberAdd', member => {
     let avatar = member.user.avatarURL
   
     let embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
+        .setColor('3498db')
         .setThumbnail(avatar)
-        .addField('Novo Membro', `» Olá, ${member}. Seja bem vindo \n ao servidor de Discord da GamersBoard \n \n» Fórum:: https://gamersboard.com.br `)
-        .setFooter(`© GamersBoard - 2018`);
+        .addField('Novo membro!', `» Olá, ${member}. Seja bem vindo \n ao servidor de Discord da GamersBoard \n \n» Fórum: https://gamersboard.com.br `)
+        .setFooter(`© GamersBoard`);
         client.channels.get('498244254053826580').send(embed);
   })
 
