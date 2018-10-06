@@ -103,7 +103,8 @@ if(msg.startsWith(prefix + 'AVISO')){
             .setDescription(args1[0])
             .setThumbnail('')
             .setColor('3498db')
-            .setFooter('Atenciosamente' + .message.author.username)
+            .addField('Atenciosamente,')
+            .setFooter('.message.author.username)
              message.channel.send(embed);
     
         }
