@@ -277,7 +277,18 @@ client.on('message', (message) => {
         });
     }
 
-});
+}); 
+
+client.on('guildMemberAdd', member => {
+    let avatar = member.user.avatarURL
+  
+    let embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setThumbnail(avatar)
+        .addField('Novo Membro', `» Olá, ${member}. Seja bem vindo \n ao servidor de Discord da GamersBoard \n \n» Fórum:: https://gamersboard.com.br `)
+        .setFooter(`© GamersBoard - 2018`);
+        client.channels.get('498244254053826580').send(embed);
+  })
 
 
   client.login(process.env.token);; 
