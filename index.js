@@ -90,7 +90,7 @@ client.on('message', (message) => {
    
        if(msg.startsWith(prefix + 'AVISO')){
         
-            if(!message.member.roles.find("name", 'Administradores', 'Coordenadores', 'Moderadores')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
+            if(!message.member.roles.find("name", 'Administradores, Coordenadores, Moderadores')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
         })
               let args1 = message.content.slice(prefix.length + 5).split(";");
             let embed = new Discord.RichEmbed()
