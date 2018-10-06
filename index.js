@@ -64,7 +64,7 @@ client.on('message', (message) => {
 
         const erd = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.avatarURL)
-            .setColor('RANDOM')
+            .setColor('3498db')
             .setTimestamp()
             .setTitle('📝 Sugestão')
             .setDescription("*Faça sugestões para a GamersBoard.*\n\n:bulb: **| /sugerir ``<sugestão>``**")
@@ -77,7 +77,7 @@ client.on('message', (message) => {
         const embed = new Discord.RichEmbed()
             .setThumbnail('https://cdn.discordapp.com/icons/173639611648573441/cf8763951089898365e532f80b82076d.png?size=2048')
             .setTitle(':hammer: Sugestão')
-            .setColor('RANDOM')
+            .setColor('3498db')
             .setDescription('Para enviar uma sugestão utilize o comando /sugerir (sugestão).')
             .addField('📝 | Sugestão:', sugerindo )
             .addField('<:rotating_light:452700782001913867> | Autor:', message.author, true)
@@ -104,7 +104,7 @@ client.on('message', (message) => {
                 .setDescription(args1[0])
                 .setThumbnail('https://cdn.discordapp.com/attachments/437386255974662144/498179091262996484/cf8763951089898365e532f80b82076d.png')
                 .addField('Atenciosamente,', message.author.username)
-                .setColor('f26363')
+                .setColor('3498db')
     
         client.channels.get('497807969497645056').send({embed});
         }
@@ -119,7 +119,7 @@ client.on('message', (message) => {
                 let embed = new Discord.RichEmbed()
                     .setTitle(`:pencil: | GamersBoard - Atualização `)
                     .setDescription(`${args1}`)
-                .setColor('f26363')
+                .setColor('3498db')
                 .setFooter(message.author.username, message.author.avatarURL)
 	         message.channel.send(embed);
         
@@ -136,7 +136,7 @@ client.on('message', (message) => {
 
         const erd = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.avatarURL)
-            .setColor('RANDOM')
+            .setColor('3498db')
             .setTimestamp()
             .setTitle('🛡 Denúncias')
             .setDescription("*Denúnciar membros.*\n\n:bulb: **| /denunciar ``<@membro>`` ``<motivo>`` - ``<prova>``**")
@@ -157,7 +157,7 @@ client.on('message', (message) => {
         });
 
         const reportado = new Discord.RichEmbed()
-            .setColor('RANDOM')
+            .setColor('3498db')
             .setTitle('🛡 Denúncia')
             .setDescription('Nova denúncia criada.')
             .addField('<:e_mail:457899299213279243> | Acusado:', user, true)
@@ -186,7 +186,7 @@ client.on('message', (message) => {
             .setAuthor(message.author.tag, message.author.avatarURL)
             .setTitle('🎟 | Ticket')
             .setDescription("*Use-o para tirar suas dúvidas.*\n\n:information_desk_person: | **/ajuda** ``<sua dúvida>``\n\n⚖ | **Alternativas:** \n/ticket")
-            .setColor('RANDOM')
+            .setColor('3498db')
             .setFooter('Ajuda', client.user.avatarURL)
 
         if(!motivo) return message.channel.send(mto).then(msg => {
@@ -194,9 +194,9 @@ client.on('message', (message) => {
         })
 
         const ert = new Discord.RichEmbed()
-            .setTitle(':warning: Opaah... Erros encontrados !')
+            .setTitle(':warning: Opa... Erros foram encontrados!')
             .addField(':no_entry_sign: | Erro encontrado:', "Grupo ``Teste`` não foi encontrado porfavor crie-o /")
-            .setColor('f4eb42')
+            .setColor('3498db')
             .setTimestamp()
             .setFooter('Erro: Ticket', client.user.avatarURL)
 
@@ -231,7 +231,7 @@ client.on('message', (message) => {
             });
 
             const embed = new Discord.RichEmbed()
-                .setColor('f45c42')
+                .setColor('3498db')
                 .setTimestamp()
                 .setAuthor(message.author.tag, message.author.avatarURL)
                 .addField('⚙ | Status:', 'Aberto')
@@ -258,7 +258,7 @@ client.on('message', (message) => {
             .setDescription("*Você realmente deseja fechar esse ticket ?*\n🚪 | **Fechar:**\nCaso queira fechar basta utilizar o comando: ``confirmar``\n🕐 | Você possui 10 segundos para fechar, ou será cancelado ! \n\n :thumbsup:\n")
             .setFooter(message.channel.name, client.user.avatarURL)
             .setTimestamp()
-            .setColor('RANDOM')
+            .setColor('3498db')
         message.channel.send(embed)
         .then((m) => {
           message.channel.awaitMessages(response => response.content === '/confirmar', {
