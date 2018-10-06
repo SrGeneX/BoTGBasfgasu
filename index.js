@@ -91,7 +91,7 @@ client.on('message', (message) => {
         });
     }
 
-    if(msg.startsWith(prefix + 'ANUNCIAR')){
+    if(msg.startsWith(prefix + 'AVISO')){
             
         message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
@@ -102,9 +102,8 @@ client.on('message', (message) => {
             .setTitle(`:loudspeaker: Gamersboard - Anúncio`)
             .setDescription(args1[0])
             .setThumbnail('')
-            .addField('*__Atenciosamente,__*', message.author)
             .setColor('f26363')
-            .setFooter(message.author.username, message.author.avatarURL)
+            .setFooter('*__Atenciosamente,__*', message.author.username, message.author.avatarURL)
 	         message.channel.send(embed);
    
         }
