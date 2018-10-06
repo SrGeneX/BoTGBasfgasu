@@ -39,7 +39,7 @@ client.on("ready", () => {
     const activities = ['https://gamersboard.com.br/', 'https://gamersboard.com.br/']
     let counter = 0
     setInterval(function() {
-        client.user.setGame(activities[counter], "https://twitch.tv/mygenex")
+        client.user.setGame(activities[counter], "https://twitch.tv/gamersboard")
         counter+= 1
         counter %= activities.length
     }, 10000)
@@ -67,10 +67,9 @@ client.on('message', (message) => {
             .setColor('3498db')
             .setTimestamp()
             .setTitle('📝 Sugestão')
-            .setDescription("*Faça sugestões para a GamersBoard.*\n\n:bulb: **| /sugerir ``<sugestão>``**")
+            .setDescription("*Faça sugestões para a Gamers Board com o comando*\n\n:bulb: **| /sugerir ``<sugestão>``.**")
 
         if(!sugerindo) return message.channel.send(erd).then(msg => {
-            msg.delete(20000);
             msg.react('💡');
         });
 
@@ -78,7 +77,7 @@ client.on('message', (message) => {
             .setThumbnail('https://cdn.discordapp.com/icons/173639611648573441/cf8763951089898365e532f80b82076d.png?size=2048')
             .setTitle(':hammer: Sugestão')
             .setColor('3498db')
-            .setDescription('Para enviar uma sugestão utilize o comando /sugerir (sugestão).')
+            .setDescription('Para enviar uma sugestão, utilize o comando: /sugerir (sugestão).')
             .addField('📝 | Sugestão:', sugerindo )
             .addField('<:rotating_light:452700782001913867> | Autor:', message.author, true)
         client.channels.get('498247273927540746').send(embed).then(msg => {
@@ -87,7 +86,6 @@ client.on('message', (message) => {
         });
 
         message.reply(' Sua sugestão foi enviada com sucesso, é de extrema importancia que você mande sugestões para a GamersBoard, muito obrigado').then(msg => {
-            msg.delete(10000);
         });
     }
     
@@ -95,12 +93,11 @@ client.on('message', (message) => {
         
         message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
-            msg.delete(10000)
         })
               let args1 = message.content.slice(prefix.length + 5).split(";");
             let embed = new Discord.RichEmbed()
                 .setFooter(hoje)
-                .setTitle(`:loudspeaker: | Gamers Board - Anúncio`)
+                .setTitle(`:loudspeaker: | GamersBoard - Anúncio`)
                 .setDescription(args1[0])
                 .addField('Atenciosamente,', message.author.username)
                 .setColor('3498db')
@@ -141,17 +138,14 @@ client.on('message', (message) => {
             .setDescription("*Denúnciar membros.*\n\n:bulb: **| /denunciar ``<@membro>`` ``<motivo>`` - ``<prova>``**")
 
         if(!user) return message.channel.send(erd).then(msg => {
-            msg.delete(20000);
             msg.react('🛡');
         });
 
         if(!motivo) return message.channel.send(erd).then(msg => {
-            msg.delete(20000);
             msg.react('🛡');
         });
 
         if(!motivo[1]) return message.channel.send(erd).then(msg => {
-            msg.delete(20000);
             msg.react('🛡');
         });
 
@@ -171,7 +165,6 @@ client.on('message', (message) => {
         });
 
         message.reply('🛡 | Sua denúncia foi enviada com sucesso, agradecemos pela sua denúncia!').then(msg => {
-            msg.delete(10000);
         });
 
     }
@@ -189,7 +182,6 @@ client.on('message', (message) => {
             .setFooter('Ajuda', client.user.avatarURL)
 
         if(!motivo) return message.channel.send(mto).then(msg => {
-            msg.delete(20000)
         })
 
         const ert = new Discord.RichEmbed()
@@ -226,7 +218,6 @@ client.on('message', (message) => {
 
             message.reply(`📂| Seu ticket foi criado com sucesso ! Por favor aguarde até alguem atende-lo, obrigado.\n\n📝 | Acesse seu ticket: <#${c.id}>`).then(msg => {
                 msg.react('🕐');
-                msg.delete(20000);
             });
 
             const embed = new Discord.RichEmbed()
