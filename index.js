@@ -104,7 +104,7 @@ client.on('message', (message) => {
                 .setDescription(args1[0])
                 .setThumbnail('https://cdn.discordapp.com/attachments/437386255974662144/498179091262996484/cf8763951089898365e532f80b82076d.png')
                 .addField('Atenciosamente,', message.author.username)
-            .setColor('f26363')
+                .setColor('f26363')
     
         client.channels.get('497807969497645056').send({embed});
         }
