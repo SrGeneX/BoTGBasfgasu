@@ -91,22 +91,22 @@ client.on('message', (message) => {
         });
     }
 
-   if(msg.startsWith(prefix + 'AVISO')){
-        
+if(msg.startsWith(prefix + 'AVISO')){
+            
         message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
             msg.delete(10000)
         })
-              let args1 = message.content.slice(prefix.length + 5).split(";");
+              let args1 = message.content.slice(prefix.length + 5).split('/');
             let embed = new Discord.RichEmbed()
-                .setFooter(hoje)
-                .setTitle(`:loudspeaker: Gamers Board - Anúncio `)
-                .setDescription(args1[0])
-                .setThumbnail('')
-                .addField('Atenciosamente,', message.author)
-            .setColor('f26363')
+            .setTitle(`:loudspeaker: Gamers Board - Anúncio`)
+            .setDescription(args1[0], '\n Atenciosamente,')
+            .setThumbnail('')
+            .setColor('3498db')
             .setFooter(message.author.username, message.author.avatarURL)
-	         message.channel.send(embed);
+             message.channel.send(embed);
+    
+        }
     
     if(msg.startsWith(prefix + 'DENUNCIAR')){
 
