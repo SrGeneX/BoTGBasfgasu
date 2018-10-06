@@ -78,7 +78,7 @@ client.on('message', (message) => {
             .setThumbnail('https://cdn.discordapp.com/icons/173639611648573441/cf8763951089898365e532f80b82076d.png?size=2048')
             .setTitle(':hammer: Sugestão')
             .setColor('RANDOM')
-            .setDescription('Para enviar uma sugestão utilize o comando /sugerir (Sugestão).')
+            .setDescription('Para enviar uma sugestão utilize o comando /sugerir (sugestão).')
             .addField('📝 | Sugestão:', sugerindo )
             .addField('<:rotating_light:452700782001913867> | Autor:', message.author, true)
         client.channels.get('497807894515810315').send(embed).then(msg => {
@@ -91,6 +91,23 @@ client.on('message', (message) => {
         });
     }
 
+    if(msg.startsWith(prefix + 'AVISO')){
+            
+        message.delete();
+            if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
+            msg.delete(10000)
+        })
+              let args1 = message.content.slice(prefix.length + 5).split('/');
+            let embed = new Discord.RichEmbed()
+            .setTitle(`:loudspeaker: Gamersboard - ${hojee}`)
+            .setDescription(args1[0])
+            .setThumbnail('')
+            .setColor('f26363')
+            .setFooter(message.author.username, message.author.avatarURL)
+             message.channel.send(embed);
+    
+        }
+    
     if(msg.startsWith(prefix + 'DENUNCIAR')){
 
         message.delete();
