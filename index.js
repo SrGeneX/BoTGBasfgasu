@@ -237,7 +237,7 @@ client.on('message', (message) => {
 
         const embed = new Discord.RichEmbed()
             .setAuthor(message.author.tag, message.author.avatarURL)
-            .setDescription("*Você realmente deseja fechar esse ticket ?*\n🚪 | **Fechar:**\nCaso queira fechar basta usar: ``!confirmar``\n🕐 | Você possui 10 segundos para fechar, ou será cancelado ! \n\n :thumbsup:\n")
+            .setDescription("*Você realmente deseja fechar esse ticket ?*\n🚪 | **Fechar:**\nCaso queira fechar basta utilizar o comando: ``confirmar``\n🕐 | Você possui 10 segundos para fechar, ou será cancelado ! \n\n :thumbsup:\n")
             .setFooter(message.channel.name, client.user.avatarURL)
             .setTimestamp()
             .setColor('RANDOM')
