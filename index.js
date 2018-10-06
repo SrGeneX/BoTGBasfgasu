@@ -90,7 +90,8 @@ client.on('message', (message) => {
             msg.delete(10000);
         });
     }
-if(msg.startsWith(prefix + 'AVISO')){
+    
+       if(msg.startsWith(prefix + 'AVISO')){
         
         message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
