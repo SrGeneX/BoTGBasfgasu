@@ -91,7 +91,7 @@ client.on('message', (message) => {
         });
     }
 
-    if(msg.startsWith(prefix + 'AVISO')){
+    if(msg.startsWith(prefix + 'ANUNCIAR')){
             
         message.delete();
             if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
