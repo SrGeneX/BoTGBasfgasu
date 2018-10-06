@@ -103,8 +103,7 @@ client.on('message', (message) => {
             .setDescription(args1[0])
             .setThumbnail('')
             .setColor('3498db')
-	    .addField('Atenciosamente,')
-            .setFooter(message.author.username)
+	    .addField('Atenciosamente, message.author.username')
 	         message.channel.send(embed);
    
         }
