@@ -31,7 +31,7 @@ var prefix = "/";
 
 client.on("ready", () => {
     
-     client.channels.get('497807989399617536').send(':white_check_mark: ' + hoje).then(msg => {
+     client.channels.get('480125622174351392').send(':white_check_mark: ' + hoje).then(msg => {
         msg.delete(60000)
     })
       
@@ -81,7 +81,7 @@ client.on('message', (message) => {
             .setDescription('Para enviar uma sugestão utilize o comando /sugerir (sugestão).')
             .addField('📝 | Sugestão:', sugerindo )
             .addField('<:rotating_light:452700782001913867> | Autor:', message.author, true)
-        client.channels.get('497807894515810315').send(embed).then(msg => {
+        client.channels.get('498247273927540746').send(embed).then(msg => {
             msg.react('👍');
             msg.react('👎');
         });
@@ -105,7 +105,7 @@ client.on('message', (message) => {
                 .addField('Atenciosamente,', message.author.username)
                 .setColor('3498db')
     
-        client.channels.get('497807969497645056').send({embed});
+        client.channels.get('488098325552300035').send({embed});
         }
     
     if(msg.startsWith(prefix + 'CHANGELOG')){
@@ -165,7 +165,7 @@ client.on('message', (message) => {
             .addField('📝 | Motivo:', motivo[0], true)
             .addField('🖼 | Prova:', motivo[1], true)
             .setThumbnail(client.user.avatarURL)
-        client.channels.get('497807909405851659').send(reportado).then(msg => {
+        client.channels.get('488872840356036608').send(reportado).then(msg => {
             msg.react('✅');
             msg.react('❌');
         });
@@ -286,7 +286,7 @@ client.on('guildMemberAdd', member => {
         .setThumbnail(avatar)
         .addField('Novo membro!', `» Olá, ${member}. Seja bem vindo \n ao servidor de Discord da GamersBoard \n \n» Fórum: https://gamersboard.com.br `)
         .setFooter(`© GamersBoard`);
-        client.channels.get('498244254053826580').send(embed);
+        client.channels.get('497398358080618526').send(embed);
   })
 
 
