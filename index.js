@@ -99,13 +99,14 @@ client.on('message', (message) => {
         })
               let args1 = message.content.slice(prefix.length + 5).split('/');
             let embed = new Discord.RichEmbed()
-            .setTitle(`:loudspeaker: Gamersboard - ${hojee}`)
+            .setTitle(`:loudspeaker: Gamersboard - Anúncio`)
             .setDescription(args1[0])
             .setThumbnail('')
+            .addField('*__Atenciosamente,__*', message.author)
             .setColor('f26363')
             .setFooter(message.author.username, message.author.avatarURL)
-             message.channel.send(embed);
-    
+	         message.channel.send(embed);
+   
         }
     
     if(msg.startsWith(prefix + 'DENUNCIAR')){
