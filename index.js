@@ -106,7 +106,7 @@ client.on('message', (message) => {
                 .addField('Atenciosamente,', message.author.username)
             .setColor('f26363')
     
-        client.channels.get('483378275574611991').send({embed});
+        client.channels.get('497807969497645056').send({embed});
         }
     
     if(msg.startsWith(prefix + 'DENUNCIAR')){
