@@ -87,10 +87,10 @@ client.on('message', (message) => {
         message.reply(' Sua sugestão foi enviada com sucesso, é de extrema importancia que você mande sugestões para a GamersBoard, muito obrigado').then(msg => {
         });
     }
-    
+   
        if(msg.startsWith(prefix + 'AVISO')){
         
-            if(!message.member.roles.find("name", 'Teste')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
+            if(!message.member.roles.find("name", 'Administradores' 'Coordenadores' 'Moderadores')) return message.channel.sendMessage(":x: | Você não possui permissão").then(msg => {
         })
               let args1 = message.content.slice(prefix.length + 5).split(";");
             let embed = new Discord.RichEmbed()
