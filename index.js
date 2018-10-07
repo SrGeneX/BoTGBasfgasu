@@ -123,7 +123,9 @@ client.on('message', (message) => {
     
     if(msg.startsWith(prefix + 'DENUNCIAR')){
 
-
+                if(message.member.roles.find("name", 'Muted')) return message.channel.sendMessage(":x: | Você está mutado.").then(msg => {
+                msg.delete(10000)
+            })
         let user = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
         let motivo = args.slice(1).join(" ").split('-');
@@ -169,6 +171,9 @@ client.on('message', (message) => {
 
     if(msg.startsWith(prefix + 'AJUDA') || msg.startsWith(prefix + 'TICKET')){
 
+                if(message.member.roles.find("name", 'Muted')) return message.channel.sendMessage(":x: | Você está mutado.").then(msg => {
+                msg.delete(10000)
+            })
         let motivo = args.slice(0).join(" ");
 
         const mto = new Discord.RichEmbed()
