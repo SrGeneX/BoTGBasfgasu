@@ -270,16 +270,5 @@ client.on('message', (message) => {
 
 }); 
 
-client.on('guildMemberAdd', member => {
-    let avatar = member.user.avatarURL
-  
-    let embed = new Discord.RichEmbed()
-        .setColor('3498db')
-        .setThumbnail(avatar)
-        .addField('Novo membro!', `» Olá, ${member}. Seja bem vindo \n ao servidor de Discord da GamersBoard \n \n» Fórum: https://gamersboard.com.br `)
-        .setFooter(`© GamersBoard`);
-        client.channels.get('497398358080618526').send(embed);
-  })
-
 
   client.login(process.env.token);; 
