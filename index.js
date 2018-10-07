@@ -31,7 +31,7 @@ var prefix = "/";
 
 client.on("ready", () => {
     
-     client.channels.get('480125622174351392').send(':white_check_mark: ' + hoje).then(msg => {
+     client.channels.get('497789408360267779').send(':white_check_mark: ' + hoje).then(msg => {
         msg.delete(60000)
     })
       
