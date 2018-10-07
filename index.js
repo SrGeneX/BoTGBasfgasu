@@ -58,7 +58,7 @@ client.on('message', (message) => {
 
     if(msg.startsWith(prefix + 'SUGERIR')){
 
-                if(!message.member.roles.find("name", 'Muted')) return message.channel.sendMessage(":x: | Você não está mutado.").then(msg => {
+                if(message.member.roles.find("name", 'Muted')) return message.channel.sendMessage(":x: | Você está mutado.").then(msg => {
                 msg.delete(10000)
             })
         let sugerindo = args.slice(0).join(" ");
