@@ -193,7 +193,7 @@ client.on('message', (message) => {
             .setTimestamp()
             .setFooter('Erro: Ticket', client.user.avatarURL)
 
-        if(!message.guild.roles.exists("name", "Teste")) return client.channels.get('474352141985775628').send(ert);
+        if(!message.guild.roles.exists("name", "Teste")) return client.channels.get('497789408360267779').send(ert);
 
         if(message.guild.channels.exists("name", "ticket-" + message.author.username)) return message.reply(':x: | Você já possui um ticket aberto...  ').then(msg => {
             msg.delete(10000);
